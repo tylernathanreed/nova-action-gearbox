@@ -86,9 +86,9 @@ Actions are the name of the game here. You'll have to update your base Action in
 use Illuminate\Bus\Queueable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
-use Reedware\NovaActionGearbox\Actions\Action as GearboxAction;
+use Reedware\NovaActionGearbox\Actions\Action as ActionGearboxAction;
 
-class Action extends GearboxAction
+class Action extends ActionGearboxAction
 {
     use InteractsWithQueue, Queueable, SerializesModels;
 }
