@@ -3,7 +3,7 @@ Replaces the Nova Action Selector with a Gearbox Dropdown.
 
 ### Installation
 
-#### Require this Package
+#### Step 1: Require this Package
 
 Require this package with composer.
 
@@ -17,11 +17,11 @@ This package uses auto-discovery, so doesn't require you to manually add the ser
 \Reedware\NovaActionGearbox\NovaActioNGearboxServiceProvider::class
 ```
 
-#### Update your base Resource
+#### Step 2: Update your base Resource
 
 This package overrides some of the functionality of the base Resource. You'll have to update your base Resource in order to use the Action Gearbox. There are two ways to do this:
 
-**1)** Extend the Action Gearbox Resource
+**Option A)** Extend the Action Gearbox Resource
 
 ```php
 use Reedware\NovaActionGearbox\Resource as ActionGearboxResource;
@@ -34,7 +34,7 @@ abstract class Resource extends ActionGearboxResource
 
 This is the easiest, and recommended solution.
 
-**2)** Use the Action Gearbox Resource Trait
+**Option B)** Use the Action Gearbox Resource Trait
 
 ```php
 use Laravel\Nova\Resource as NovaResource;
@@ -48,11 +48,11 @@ abstract class Resource extends NovaResource
 
 This is the alternative solution for when you can't, or prefer not to, extend the Resource class that comes with this package.
 
-#### Update your base Lens
+#### Step 3: Update your base Lens
 
 Lenses can come with actions too, therefore this package requires a small override for them. You'll have to update your base Resource in order to use the Action Gearbox. There are two ways to do this:
 
-**1)** Extend the Action Gearbox Lens
+**Option A)** Extend the Action Gearbox Lens
 
 ```php
 use Reedware\NovaActionGearbox\Lenses\Lens as ActionGearboxLens;
@@ -65,7 +65,7 @@ abstract class Lens extends ActionGearboxLens
 
 This is the easiest, and recommended solution.
 
-**2)** Use the Action Gearbox Lens Traits
+**Option B)** Use the Action Gearbox Lens Traits
 
 ```php
 use Laravel\Nova\Lenses\Lens as NovaLens;
