@@ -7,8 +7,8 @@ use Laravel\Nova\Resource;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Nova\Http\Requests\NovaRequest;
-use NovaComponents\ActionGearbox\Actions\PivotActionGroup;
-use NovaComponents\ActionGearbox\Actions\ResourceActionGroup;
+use Reedware\NovaActionGearbox\Actions\PivotActionGroup;
+use Reedware\NovaActionGearbox\Actions\ResourceActionGroup;
 
 trait ResolvesGearboxActions
 {
