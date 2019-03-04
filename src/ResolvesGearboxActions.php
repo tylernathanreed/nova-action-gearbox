@@ -143,11 +143,11 @@ trait ResolvesGearboxActions
     public function getResourceManagementActions(Request $request)
     {
         return [
-            new \NovaComponents\ActionGearbox\Actions\View,
-            new \NovaComponents\ActionGearbox\Actions\Edit,
-            new \NovaComponents\ActionGearbox\Actions\Delete,
-            new \NovaComponents\ActionGearbox\Actions\Restore,
-            new \NovaComponents\ActionGearbox\Actions\ForceDelete
+            new \Reedware\NovaActionGearbox\Actions\View,
+            new \Reedware\NovaActionGearbox\Actions\Edit,
+            new \Reedware\NovaActionGearbox\Actions\Delete,
+            new \Reedware\NovaActionGearbox\Actions\Restore,
+            new \Reedware\NovaActionGearbox\Actions\ForceDelete
         ];
     }
 
@@ -161,8 +161,8 @@ trait ResolvesGearboxActions
     public function getResourcePivotManagementActions(Request $request)
     {
         return [
-            new \NovaComponents\ActionGearbox\Actions\EditAttached,
-            new \NovaComponents\ActionGearbox\Actions\Detach,
+            new \Reedware\NovaActionGearbox\Actions\EditAttached,
+            new \Reedware\NovaActionGearbox\Actions\Detach,
         ];
     }
 }
