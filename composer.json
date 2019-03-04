@@ -1,0 +1,26 @@
+{
+    "name": "reedware/nova-action-gearbox",
+    "description": "Replaces the Nova Action Selector with a Gearbox Dropdown.",
+    "keywords": ["laravel", "nova", "actions", "gearbox"],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Reedware\\NovaActionGearbox\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Reedware\\NovaActionGearbox\\NovaActionGearboxServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
