@@ -50,7 +50,7 @@ This is the alternative solution for when you can't, or prefer not to, extend th
 
 #### Step 3: Update your base Lens
 
-Lenses can come with actions too, therefore this package requires a small override for them. You'll have to update your base Resource in order to use the Action Gearbox. There are two ways to do this:
+Lenses can come with actions too, therefore this package requires a small override for them. You'll have to update your base Lens in order to use the Action Gearbox. There are two ways to do this:
 
 **Option A)** Extend the Action Gearbox Lens
 
@@ -77,3 +77,21 @@ abstract class Lens extends NovaLens
   use ResolvesGearboxActions, GuessesResource;
 }
 ```
+
+#### Step 4: Update your base Action
+
+Actions are the name of the game here. You'll have to update your base Action in order to use the Action Gearbox. Unlike the previous two steps, there's only one way to do this: extend the Action Gearbox Action.
+
+```php
+use Illuminate\Bus\Queueable;
+use Illuminate\Queue\SerializesModels;
+use Illuminate\Queue\InteractsWithQueue;
+use Reedware\NovaActionGearbox\Actions\Action as GearboxAction;
+
+class Action extends GearboxAction
+{
+    use InteractsWithQueue, Queueable, SerializesModels;
+}
+```
+
+You don't have to include the traits from Illuminate, these are only shown as an example.
